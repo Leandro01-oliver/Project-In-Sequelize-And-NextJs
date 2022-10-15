@@ -1,7 +1,0 @@
-const path = require('path');
-
-module.exports = {
-  config: path.resolve('sequelize', 'dbConfig/index.ts'),
-  'models-path': path.resolve('database', 'models'),
-  'migrations-path': path.resolve('sequelize', 'migrations'),
-};

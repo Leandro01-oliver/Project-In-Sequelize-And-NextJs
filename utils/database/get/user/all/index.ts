@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const getUserAll = (setDataUser : any) =>{
-   axios.get("api/get/all/")
+const getUserAll = () =>{
+   axios.get("api/get/user/all/")
    .then((res)=>{
-    setDataUser(res.data)
+    // setDataUser(res.data)
+    console.log(res.data.data)
     })
     .catch(()=>{
     console.log("Não foi possível acessar o user")

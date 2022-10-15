@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getUserId = (id : Number, setDataUser: any) =>{
-   axios.get(`api/get/id/${id}`)
+   axios.get(`api/get/user/id/${id}`)
    .then((res)=>{
      setDataUser(res.data)
     })

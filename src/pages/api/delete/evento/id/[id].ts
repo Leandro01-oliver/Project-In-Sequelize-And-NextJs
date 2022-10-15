@@ -2,9 +2,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Evento } from "../../../../../../utils/database/models/evento";
 
 
-const handlerGetEventoId = async(
+const handlerDeleteEventoId = async (
     req: NextApiRequest,
-    res: NextApiResponse) => {
+    res: NextApiResponse
+) => {
 
     const {
         method
@@ -14,15 +15,19 @@ const handlerGetEventoId = async(
         id
     } = req.query;
 
-    if (method == 'GET') {
+    if (method === 'DELETE') {
         
-        const eventoId = await Evento.findByPk(id?.toString());
-        
+        const eventoId = await Evento.destroy({
+            where:{
+                id
+            }
+        });
+
         res.status(200).json({
            data : eventoId
         });
-
+        
     }  
 }
 
-export default handlerGetEventoId
+export default handlerDeleteEventoId;

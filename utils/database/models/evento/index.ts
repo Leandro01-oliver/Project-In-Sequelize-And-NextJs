@@ -2,6 +2,7 @@ import {
     DataTypes
 } from 'sequelize';
 import { connecting } from "../../../../config/sequelize"
+import { User } from '../user';
 
   const Evento =  connecting().define("tb_evento",{
     id:{
@@ -20,10 +21,15 @@ import { connecting } from "../../../../config/sequelize"
     }
 })
 
+Evento.belongsTo(User, {
+    constraints: true,
+    foreignKey: 'id_user'
+});
+
 Evento.sync()
 .then((data)=>{
     console.log("Sucesso na criação da model de evento");
-    console.log("Resultado : ", data);
+    console.log("Resultado : ", data)
 })
 .catch(()=>{
     console.log("Não foi possível criar a model de evento")

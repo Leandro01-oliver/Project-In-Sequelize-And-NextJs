@@ -7,10 +7,14 @@ const handlerGetUser = async(
     res: NextApiResponse) => {
 
         const {
+            method
+        } = req
+
+        const {
             id
         } = req.query;
     
-        if (req.method == 'GET') {
+        if (method == 'GET') {
             
             const eventoId = await User.findByPk(id?.toString());
             

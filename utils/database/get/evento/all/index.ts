@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const getEventoAll = (setDataEvento : any) =>{
-   axios.get("api/get/all/")
+const getEventoAll = () =>{
+   axios.get("api/get/evento/all/")
    .then((res)=>{
-    setDataEvento(res.data)
+    // setDataEvento(res.data)
+    console.log(res.data)
     })
     .catch(()=>{
     console.log("Não foi possível acessar o evento")
