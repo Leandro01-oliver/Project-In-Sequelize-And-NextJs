@@ -28,62 +28,62 @@ const Home: NextPage = () => {
         alignItems={'center'}
       >
         <Box
-  w={{base:'100%',lg:'50%'}}
-  h={'350px'}
-  boxShadow={'0 0 10px 0 rgba(0,0,0,.5)'}
-  borderRadius={'10px'}
-  p={'1rem'}
-  mx={'auto'}
-  >
-   <Box>
-    <Text
-    fontSize={'30px'}
-    fontWeight={'bold'}
-    >
-       CRUD de User
-    </Text>
-   </Box>
-   <SimpleGrid
-        gap={'20px'}
-        w={'100%'}
-        mt={'1rem'}
-        columns={{ base: 1, lg: 2 }}
-        justifyContent={'center'}
-        alignItems={'center'}
-      >
-        <Button
-          onClick={() => {
-            tableUser()
-          }}
+          w={{ base: '100%', lg: '450px' }}
+          h={'350px'}
+          boxShadow={'0 0 10px 0 rgba(0,0,0,.5)'}
+          borderRadius={'10px'}
+          p={'1rem'}
+          mx={'auto'}
         >
-          Criar user
-        </Button>
-        <Button
-          onClick={() => {
-            getUserAll()
-          }}
-        >
-          Exibir user
-        </Button>
-        <Button
-          onClick={() => {
-            putUserId(2)
-          }}
-        >
-          Editar user
-        </Button>
-        <Button
-          onClick={() => {
-            deleteUserId(1)
-          }}
-        >
-          Excluir user
-        </Button>
-      </SimpleGrid>
-  </Box>
+          <Box>
+            <Text
+              fontSize={'30px'}
+              fontWeight={'bold'}
+            >
+              CRUD de User
+            </Text>
+          </Box>
+          <SimpleGrid
+            gap={'20px'}
+            w={'100%'}
+            mt={'1rem'}
+            columns={{ base: 1, lg: 2 }}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Button
+              onClick={() => {
+                tableUser()
+              }}
+            >
+              Criar user
+            </Button>
+            <Button
+              onClick={() => {
+                getUserAll()
+              }}
+            >
+              Exibir user
+            </Button>
+            <Button
+              onClick={() => {
+                putUserId(2)
+              }}
+            >
+              Editar user
+            </Button>
+            <Button
+              onClick={() => {
+                deleteUserId(1)
+              }}
+            >
+              Excluir user
+            </Button>
+          </SimpleGrid>
+        </Box>
 
         <Box
-          w={{ base: '100%', lg: '50%' }}
+          w={{ base: '100%', lg: '450px' }}
           h={'350px'}
           boxShadow={'0 0 10px 0 rgba(0,0,0,.5)'}
           borderRadius={'10px'}
@@ -114,19 +114,20 @@ const Home: NextPage = () => {
               Criar Evento
             </Button>
             <Button
-          onClick={() => {
-            getEventoAll()
-          }}
-        >
-          Exibir user
-        </Button>
+              onClick={() => {
+                getEventoAll()
+              }}
+            >
+              Exibir user
+            </Button>
             <Button
               onClick={() => {
                 putEventoId(1)
               }}
             >
-              Editar Evento
+              Editar por id do Evento
             </Button>
+
             <Button
               onClick={() => {
                 deleteEventoId(1)

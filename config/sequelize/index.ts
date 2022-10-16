@@ -10,7 +10,8 @@ const connecting = () =>{
          configDb.test.password!, 
          {
             dialect: "mysql",
-            host: configDb.test.host
+            host: configDb.test.host,
+            logging: !configDb.test.logging
          }
       );
       db.authenticate()
@@ -28,7 +29,8 @@ const connecting = () =>{
          configDb.production.password, 
          {
             dialect: "mysql",
-            host: configDb.production.host
+            host: configDb.production.host,
+            logging: !configDb.production.logging
          }
       );
       db.authenticate()
@@ -46,7 +48,8 @@ const connecting = () =>{
          configDb.development.password, 
          {
             dialect: "mysql",
-            host: configDb.development.host
+            host: configDb.development.host,
+            logging: !configDb.development.logging
          }
       );;
       db.authenticate()

@@ -16,7 +16,7 @@ const handlerDeleteUserId = async (
     } = req.query;
 
 
-    if (method == 'DELETE') {
+    if (method === 'DELETE') {
         
         const userId = await User.destroy({
             where: {

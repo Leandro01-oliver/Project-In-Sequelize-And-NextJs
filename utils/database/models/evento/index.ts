@@ -4,7 +4,7 @@ import {
 import { connecting } from "../../../../config/sequelize"
 import { User } from '../user';
 
-  const Evento =  connecting().define("tb_evento",{
+  const Evento = connecting().define("tb_evento",{
     id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
